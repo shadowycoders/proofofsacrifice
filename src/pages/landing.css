@@ -44,6 +44,7 @@
   background-size: cover;
   background-image: url("../assets/sheep.png");
 }
+
 .gradient-container {
   margin-top: 1rem;
   display: flex;
@@ -169,7 +170,9 @@
     height: 3rem;
     width: 5rem;
   }
-
+  .lato {
+    font-size: 0.5rem;
+  }
   .sheep2 {
     top: -2rem;
     right: 1rem;
