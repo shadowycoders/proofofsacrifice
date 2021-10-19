@@ -1,0 +1,25 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+.about p {
+  font-family: lato;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+@media only screen and (max-width: 600px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+  .about p {
+    font-family: lato;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .about h1 {
+    font-size: 18px;
+  }
+}
