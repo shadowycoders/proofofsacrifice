@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from "react";
 import { useState } from "react";
 import { Web3ReactProvider } from '@web3-react/core'
@@ -49,8 +50,14 @@ function Landing() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setClicked(true);
-    completed && console.log(code);
+    axios.post(`https://proofofsacrifice.com/nft`, {
+      code: code,
+      address: ''
+    })
+      .then(res => {
+      })
+    // setClicked(true);
+    // completed && console.log(code);
   };
 
   return (
