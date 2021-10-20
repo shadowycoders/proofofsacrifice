@@ -43,7 +43,6 @@ function Path() {
           </div>
           <div className={styles.six}>
             <img src={drinks} style={{ height: "60px" }} />
-
             <p>Rejoice! Drink the Gods' nectar as it drops from the sky</p>
           </div>
         </div>

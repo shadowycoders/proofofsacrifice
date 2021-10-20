@@ -154,6 +154,15 @@
   padding: 0 7px 0;
   line-height: 1.25;
 }
+.border {
+  position: absolute;
+  width: 178px;
+  height: 76px;
+  left: 355px;
+  top: 1587px;
+  border: 4px dashed #4f4f4f;
+  transform: rotate(90deg);
+}
 @media only screen and (max-width: 600px) {
   .gridContainer {
     grid-template-columns: repeat(1, 1fr);

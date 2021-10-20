@@ -10,6 +10,7 @@ function MassSacrifice() {
           <div className={styles.btnContainer}>
             <input
               autoComplete="off"
+              placeholder="Enter Email Adress"
               type="text"
               id="email"
               name="email"

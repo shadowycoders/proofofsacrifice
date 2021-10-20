@@ -12,8 +12,10 @@ function Landing() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setClicked(true);
-    completed && console.log(code);
+    if (completed) {
+      console.log(code);
+      setClicked(true);
+    }
   };
 
   return (
@@ -48,7 +50,11 @@ function Landing() {
                   Baa Baa
                 </button>
               </form>
-              <a href="#" className="lato">
+              <a
+                href="https://t.me/shadowycoderscommunity"
+                target="_blank"
+                className="lato"
+              >
                 Don’t have a Code? Join our telegram to get it!
               </a>
             </div>
