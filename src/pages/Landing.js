@@ -60,7 +60,7 @@ export const Wallet = () => {
       {!clicked ? (
         <div>
         <ReactPinField
-          length="5"
+          length="6"
           type="text"
           className="pin-field"
           autocapitalize="off"
@@ -98,7 +98,9 @@ export const Wallet = () => {
         </div>
         ) : (
         <div>
-          You are a step closer to Salvation now. Open Source be with you.
+          You are a step closer to Salvation now.
+          <br />
+          May Open Source be with you.
         </div>
        )}
        </form>
