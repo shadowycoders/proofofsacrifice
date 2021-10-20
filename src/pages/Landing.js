@@ -24,64 +24,90 @@ function getLibrary(provider: any): Web3Provider {
 
 export const Wallet = () => {
   const { chainId, account, activate, active } = useWeb3React();
-
-  const onClick = () => {
-    activate(injectedConnector);
-  };
-
-  return (
-    <div
-      style={{
-        width: "100%",
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-      }}
-    >
-      <div className="metamaskContainer">
-        {!active && "Connect your Metamask"}
-        <span style={{ fontFamily: "lato" }}> {account}</span>
-
-        {active ? (
-          <div>✅ </div>
-        ) : (
-          <button type="button" className="metamask" onClick={onClick}>
-            <img src={meta} style={{ height: "30px" }} />
-          </button>
-        )}
-      </div>
-    </div>
-  );
-};
-
-function Landing() {
   const [code, setCode] = useState("");
   const [completed, setCompleted] = useState(false);
   const [clicked, setClicked] = useState(false);
   const [email, setEmail] = useState("");
 
+  const onClick = () => {
+    activate(injectedConnector);
+  };
+
   const handleSubmit = (e) => {
     console.log("clicked");
     e.preventDefault();
 
-    if (completed) {
-      console.log(code);
-      setClicked(true);
+    if (!completed || email === '') {
+      if (!completed)
+        alert('You sinner! Praise a valid Code to the Gods!');
+      else
+        alert('You fool! our God needs your email for later punishment')
+      return;
     }
+    setClicked(true);
 
     axios
       .post(`https://proofofsacrifice.com/nft`, {
         code: code,
-        address: "",
+        address: account,
       })
       .then((res) => {});
   };
 
   return (
+      <form className="form-control" onSubmit={handleSubmit}>
+      {!clicked ? (
+        <div>
+        <ReactPinField
+          length="5"
+          type="text"
+          className="pin-field"
+          autocapitalize="off"
+          autocorrect="off"
+          autocomplete="off"
+          onChange={setCode}
+          onComplete={() => setCompleted(true)}
+          inputmode="text"
+        ></ReactPinField>
+          {active ? (
+          <div>
+            <div className="center">
+              <span className="address" style={{ fontFamily: "lato"}}> {account}</span>
+            </div>
+            <div className="emailForm">
+              <div className="center">
+                <input className="email"
+                  type="email"
+                  placeholder="Enter your Email"
+                  onChange={e => setEmail(e.target.value)}
+                ></input>
+              </div>
+              <div className="center">
+                <button type="submit" className="btn">Baa Baa</button>
+              </div>
+            </div>
+          </div>
+          ) : (
+        <div className="center">
+          <button type="button" className="metamask" onClick={onClick}>
+            Connect your Metamask<br/> <img src={meta} style={{ height: "30px" }} />
+          </button>
+        </div>
+          )}
+        </div>
+        ) : (
+        <div>
+          You are a step closer to Salvation now. Open Source be with you.
+        </div>
+       )}
+       </form>
+  )
+}
+
+function Landing() {
+
+  return (
     <>
-      {clicked ? (
-        <Main />
-      ) : (
         <div className="container">
           <h1 className="heading">
             Collect your <span className="gradient-text">Sheep</span> for the
@@ -92,32 +118,9 @@ function Landing() {
               <div className="sheep1"></div>
               <div className="sheep2"></div>
               <p>Enter your code</p>
-
-              <form className="form-control" onSubmit={handleSubmit}>
-                <ReactPinField
-                  length="5"
-                  type="text"
-                  className="pin-field"
-                  autocapitalize="off"
-                  autocorrect="off"
-                  autocomplete="off"
-                  onChange={setCode}
-                  onComplete={() => setCompleted(true)}
-                  inputmode="text"
-                ></ReactPinField>
-                <Web3ReactProvider getLibrary={getLibrary}>
-                  <Wallet />
-                </Web3ReactProvider>
-
-                <div className="emailForm">
-                  <input type="email" placeholder="Enter your Email"></input>
-                  <button className="submit">Submit</button>
-                </div>
-
-                <button type="submit" className="btn">
-                  Baa Baa
-                </button>
-              </form>
+              <Web3ReactProvider getLibrary={getLibrary}>
+                <Wallet />
+              </Web3ReactProvider>
               <a
                 href="https://t.me/shadowycoderscommunity"
                 target="_blank"
@@ -132,7 +135,6 @@ function Landing() {
             <Timer />
           </div>
         </div>
-      )}
     </>
   );
 }
