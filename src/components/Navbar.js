@@ -14,7 +14,15 @@ const scrollWithOffset = (el) => {
 
 function Navbar() {
   const isMobile = useMediaQuery({ query: `(max-width: 600px)` });
-
+  function openDiscord() {
+    window.open('https://discord.gg/YeJGNJHf5z', '_blank');
+  }
+  function openTelegram() {
+     window.open('https://t.me/shadowycoderscommunity', '_blank');
+  }
+  function openTwitter() {
+    window.open('https://twitter.com/sascdao', '_blank');
+  }
   return (
     <>
       {!isMobile ? (
@@ -66,13 +74,13 @@ function Navbar() {
             </div>
           </div>
           <div className="socials">
-            <button className="button1">
+            <a onClick={openDiscord} hRef="#" className="button1">
               <img src={discord} />
-            </button>
-            <button className="button1">
+            </a>
+            <a onClick={openTwitter} href="#" className="button1">
               <img src={twitter} />
-            </button>
-            <button className="button2">Join Telegram</button>
+            </a>
+            <button onClick={openTelegram} className="button2">Join Telegram</button>
           </div>
         </header>
       ) : (

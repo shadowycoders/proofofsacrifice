@@ -30,10 +30,6 @@ function Home() {
             <button className={styles.btnPink}>Claim your Sheep </button>
             <button className={styles.btnGray}>View all Sheep</button>
           </div>
-          <div className={styles.timer}>
-            <p>Ends in</p>
-            <Timer />
-          </div>
         </div>
         {!isMobile ? (
           <div className={styles.sheepImage}>

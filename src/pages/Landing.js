@@ -28,6 +28,7 @@ export const Wallet = () => {
   const [completed, setCompleted] = useState(false);
   const [clicked, setClicked] = useState(false);
   const [email, setEmail] = useState("");
+  const [showMain, setShowMain] = useState(true);
 
   const onClick = () => {
     activate(injectedConnector);
@@ -135,6 +136,7 @@ function Landing() {
             <Timer />
           </div>
         </div>
+        <Main />
     </>
   );
 }
