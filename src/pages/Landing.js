@@ -98,9 +98,10 @@ export const Wallet = () => {
         </div>
         ) : (
         <div>
-          You are a step closer to Salvation now.
-          <br />
-          May Open Source be with you.
+          <p>The sheep has been summoned.</p>
+          <p>You will receive it on the eve of the Day of the Dead,</p>
+          <p>on time for the sacrifice.</p>
+          <p>The blessings will be sent to your email inbox.</p>
         </div>
        )}
        </form>
