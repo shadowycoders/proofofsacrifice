@@ -6,8 +6,8 @@ function App() {
   return (
     <Router>
       <Switch>
-        {/* <Landing /> */}
-        <Main />
+        <Landing />
+        {/* <Main /> */}
       </Switch>
     </Router>
   );

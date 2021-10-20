@@ -22,6 +22,138 @@
   column-gap: 20%;
   margin-left: 25%;
 }
+.one {
+  background-image: url("../assets/1.png");
+  height: 150px;
+  width: 160px;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: lato;
+}
+.one h2 {
+  font-size: 12px;
+  margin: 3px;
+}
+.one p {
+  margin: 0;
+  font-size: 12px;
+  text-align: center;
+  padding: 0 7px 0;
+  line-height: 1.25;
+}
+.two {
+  background-image: url("../assets/2.png");
+  height: 150px;
+  width: 160px;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: lato;
+}
+.two h2 {
+  font-size: 12px;
+  margin: 3px;
+}
+.two p {
+  margin: 0;
+  font-size: 12px;
+  text-align: center;
+  padding: 0 7px 0;
+  line-height: 1.25;
+}
+.three {
+  background-image: url("../assets/3.png");
+  height: 150px;
+  width: 160px;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: lato;
+}
+.three h2 {
+  font-size: 12px;
+  margin: 3px;
+}
+.three p {
+  margin: 0;
+  font-size: 12px;
+  text-align: center;
+  padding: 0 9px 0;
+  line-height: 1.25;
+}
+.four {
+  background-image: url("../assets/4.png");
+  height: 150px;
+  width: 160px;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: lato;
+}
+.four h2 {
+  font-size: 12px;
+  margin: 3px;
+}
+.four p {
+  margin: 0;
+  font-size: 12px;
+  text-align: center;
+  padding: 0 7px 0;
+  line-height: 1.25;
+}
+.five {
+  background-image: url("../assets/5.png");
+  height: 150px;
+  width: 160px;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: lato;
+}
+.five h2 {
+  font-size: 12px;
+  margin: 3px;
+}
+.five p {
+  margin: 0;
+  font-size: 12px;
+  text-align: center;
+  padding: 0 7px 0;
+  line-height: 1.25;
+}
+.six {
+  background-image: url("../assets/6.png");
+  height: 150px;
+  width: 160px;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: lato;
+}
+.six h2 {
+  font-size: 12px;
+  margin: 3px;
+}
+.six p {
+  margin: 0;
+  font-size: 12px;
+  text-align: center;
+  padding: 0 7px 0;
+  line-height: 1.25;
+}
 @media only screen and (max-width: 600px) {
   .gridContainer {
     grid-template-columns: repeat(1, 1fr);

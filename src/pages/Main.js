@@ -8,7 +8,7 @@ function Main() {
     <>
       <Router>
         <Navbar />
-        <Switch><Route path="/Home" exact component={Home} /></Switch>
+        <Switch><Route path="/" exact component={Home} /></Switch>
       </Router>
     </>
   );

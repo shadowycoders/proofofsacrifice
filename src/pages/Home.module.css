@@ -16,7 +16,7 @@
 .header {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 90%;
 }
 .header h1 {
   line-height: 2.6rem;

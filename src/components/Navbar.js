@@ -26,7 +26,7 @@ function Navbar() {
             <div className="navbar__item">
               <NavHashLink
                 smooth
-                to="/Home/#Home"
+                to="/#Home"
                 scroll={(el) => scrollWithOffset(el)}
                 className="text-link"
               >
@@ -36,7 +36,7 @@ function Navbar() {
             <div className="navbar__item">
               <NavHashLink
                 smooth
-                to="/Home/#About"
+                to="/#About"
                 scroll={(el) => scrollWithOffset(el)}
                 className="text-link"
               >
@@ -46,7 +46,7 @@ function Navbar() {
             <div className="navbar__item">
               <NavHashLink
                 smooth
-                to="/Home/#ThePath"
+                to="/#ThePath"
                 scroll={(el) => scrollWithOffset(el)}
                 className="text-link"
               >
@@ -57,7 +57,7 @@ function Navbar() {
             <div className="navbar__item">
               <NavHashLink
                 smooth
-                to="/Home/#MassSacrifice"
+                to="/#MassSacrifice"
                 scroll={(el) => scrollWithOffset(el)}
                 className="text-link"
               >

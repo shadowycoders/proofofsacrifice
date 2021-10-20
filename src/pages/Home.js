@@ -5,7 +5,7 @@ import styles from "./Home.module.css";
 import sheep from "../assets/sheep.jpeg";
 import { useMediaQuery } from "react-responsive";
 import Timer from "../components/Timer";
-
+import MassSacrifice from "./MassSacrifice";
 function Home() {
   const isMobile = useMediaQuery({ query: `(max-width: 600px)` });
   return (
@@ -56,11 +56,11 @@ function Home() {
         </div>
       </section>
 
-      {/* <section id="MassSacrifice">
+      <section id="MassSacrifice">
         <div>
-          <Achievments />
+          <MassSacrifice />
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }
