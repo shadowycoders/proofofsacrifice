@@ -60,23 +60,14 @@ function Landing() {
   const [clicked, setClicked] = useState(false);
   const [email, setEmail] = useState("");
 
-  // useEffect(() => {
-  //   if (completed) {
-  //     console.log(code);
-  //     setClicked(true);
-  //   }
-  // }, [completed]);
-  const emailSubmit = (e) => {
-    e.preventDefault();
-  };
   const handleSubmit = (e) => {
     console.log("clicked");
     e.preventDefault();
 
-    // if (completed) {
-    //   console.log(code);
-    //   setClicked(true);
-    // }
+    if (completed) {
+      console.log(code);
+      setClicked(true);
+    }
 
     axios
       .post(`https://proofofsacrifice.com/nft`, {
@@ -84,8 +75,6 @@ function Landing() {
         address: "",
       })
       .then((res) => {});
-    // setClicked(true);
-    // completed && console.log(code);
   };
 
   return (
@@ -103,32 +92,32 @@ function Landing() {
               <div className="sheep1"></div>
               <div className="sheep2"></div>
               <p>Enter your code</p>
-              <div className="form-control">
-                <form onSubmit={handleSubmit}>
-                  <ReactPinField
-                    length="5"
-                    type="text"
-                    className="pin-field"
-                    autocapitalize="off"
-                    autocorrect="off"
-                    autocomplete="off"
-                    onChange={setCode}
-                    onComplete={() => setCompleted(true)}
-                    inputmode="text"
-                  ></ReactPinField>
-                  <Web3ReactProvider getLibrary={getLibrary}>
-                    <Wallet />
-                  </Web3ReactProvider>
-                </form>
-                <form className="emailForm" onSubmit={emailSubmit}>
+
+              <form className="form-control" onSubmit={handleSubmit}>
+                <ReactPinField
+                  length="5"
+                  type="text"
+                  className="pin-field"
+                  autocapitalize="off"
+                  autocorrect="off"
+                  autocomplete="off"
+                  onChange={setCode}
+                  onComplete={() => setCompleted(true)}
+                  inputmode="text"
+                ></ReactPinField>
+                <Web3ReactProvider getLibrary={getLibrary}>
+                  <Wallet />
+                </Web3ReactProvider>
+
+                <div className="emailForm">
                   <input type="email" placeholder="Enter your Email"></input>
                   <button className="submit">Submit</button>
-                </form>
-              </div>
-              <button type="submit" className="btn">
-                Baa Baa
-              </button>
+                </div>
 
+                <button type="submit" className="btn">
+                  Baa Baa
+                </button>
+              </form>
               <a
                 href="https://t.me/shadowycoderscommunity"
                 target="_blank"
