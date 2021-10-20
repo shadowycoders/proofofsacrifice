@@ -1,0 +1,28 @@
+.timer {
+  margin-top: 1rem;
+  color: #ff3366;
+  font-size: 2rem;
+}
+
+.labels {
+  display: flex;
+  flex-direction: row;
+  width: 20rem;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  font-family: lato;
+}
+
+@media only screen and (max-width: 600px) {
+  .timer {
+    font-size: 1.2rem;
+  }
+  .labels {
+    display: flex;
+    flex-direction: row;
+    width: 12rem;
+    justify-content: space-between;
+    font-size: 0.5rem;
+    font-family: lato;
+  }
+}

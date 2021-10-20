@@ -2,7 +2,9 @@ import React from "react";
 import { useState, useEffect, useRef } from "react";
 import "./landing.css";
 import ReactPinField from "react-pin-field";
-import Countdown from "react-countdown";
+import Timer from "../components/Timer";
+import { Link } from "react-router-dom";
+
 function Landing() {
   const [code, setCode] = useState("");
   const [completed, setCompleted] = useState(false);
@@ -42,27 +44,20 @@ function Landing() {
                 onComplete={() => setCompleted(true)}
                 inputmode="text"
               ></ReactPinField>
-              <button type="submit" className="btn">
-                Baa Baa
-              </button>
+              <Link to="">
+                <button type="submit" className="btn">
+                  Baa Baa
+                </button>
+              </Link>
             </form>
             <a href="#" className="lato">
               Don’t have a Code? Join our telegram to get it!
             </a>
           </div>
         </div>
-
         <div className="timer-container">
           <h2>ENDS IN</h2>
-          <div className="timer">
-            <Countdown date={Date.now() + 4.32e7}></Countdown>
-          </div>
-          <div className="labels">
-            <p>DAYS</p>
-            <p>HOURS</p>
-            <p>MINUTES</p>
-            <p>SECONDS</p>
-          </div>
+          <Timer />
         </div>
       </div>
     </>

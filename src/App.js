@@ -1,9 +1,15 @@
 import Landing from "./pages/Landing";
+import Main from "./pages/Main";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 function App() {
   return (
-    <div>
-      <Landing />
-    </div>
+    <Router>
+      <Switch>
+        {/* <Landing /> */}
+        <Main />
+      </Switch>
+    </Router>
   );
 }
 
