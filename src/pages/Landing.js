@@ -48,7 +48,7 @@ export const Wallet = () => {
     setClicked(true);
 
     axios
-      .post(`https://proofofsacrifice.com/nft`, {
+      .post(`https://proofofsacrifice.com/nft/reserve`, {
         code: code,
         address: account,
       })

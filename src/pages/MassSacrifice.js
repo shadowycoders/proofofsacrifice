@@ -10,7 +10,7 @@ function MassSacrifice() {
     e.preventDefault();
     setClicked(true);
     axios
-    .post(`https://proofofsacrifice.com/subscribe`, {
+    .post(`https://proofofsacrifice.com/nft/subscribe`, {
       email,
     })
     .then((res) => {});
